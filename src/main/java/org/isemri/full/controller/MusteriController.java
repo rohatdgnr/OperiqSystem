@@ -16,20 +16,17 @@ public class MusteriController {
     @Autowired
     private MusteriService musteriService;
 
-    // Müşteri listeleme
     @GetMapping
     public List<Musteri> getAllMusteri() {
         return musteriService.getAllMusteri();
     }
 
-    // Müşteri ekleme
     @PostMapping
     public ResponseEntity<Musteri> createMusteri(@RequestBody Musteri musteri) {
         Musteri savedMusteri = musteriService.createMusteri(musteri);
         return ResponseEntity.status(HttpStatus.CREATED).body(savedMusteri);
     }
 
-    // Müşteri güncelleme
     @PutMapping("/{id}")
     public ResponseEntity<Musteri> updateMusteri(@PathVariable Long id, @RequestBody Musteri musteri) {
         Musteri updatedMusteri = musteriService.updateMusteri(id, musteri);
@@ -39,7 +36,6 @@ public class MusteriController {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
     }
 
-    // Müşteri silme
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteMusteri(@PathVariable Long id) {
         boolean deleted = musteriService.deleteMusteri(id);

@@ -36,19 +36,17 @@ public class UrunController {
 
     @PostMapping("/api/urun")
     public ResponseEntity<Urun> urunEkle(@RequestBody Urun urun) {
-        // UrunMalzeme'leri ürünle ilişkilendir
         for (UrunMalzeme malzeme : urun.getUrunMalzemeler()) {
-            malzeme.setUrun(urun);  // UrunMalzeme'nin urun alanını bağla
+            malzeme.setUrun(urun);
         }
 
-        // Urun ve UrunMalzeme'yi kaydet
         Urun kaydedilenUrun = urunRepository.save(urun);
-        return ResponseEntity.ok(kaydedilenUrun);  // Kaydedilen Urun'u dön
+        return ResponseEntity.ok(kaydedilenUrun);
     }
 
     @GetMapping("/urunler")
     public ResponseEntity<List<Urun>> urunleriGetir() {
-        List<Urun> urunler = urunRepository.findAll(); // Repository'yi doğrudan kullanabilirsiniz
+        List<Urun> urunler = urunRepository.findAll();
         return ResponseEntity.ok(urunler);
     }
 
@@ -74,7 +72,6 @@ public class UrunController {
 
         Urun existingUrun = urunOptional.get();
         existingUrun.setUrunAdi(urun.getUrunAdi());
-        // Diğer alanları güncelleyin
         urunRepository.save(existingUrun);
 
         return ResponseEntity.ok(existingUrun);

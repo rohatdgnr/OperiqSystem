@@ -1,7 +1,6 @@
 package org.isemri.full.service;
 
 
-
 import org.isemri.full.model.Stok;
 import org.isemri.full.repository.StokRepository;
 import org.springframework.beans.factory.annotation.Autowired;

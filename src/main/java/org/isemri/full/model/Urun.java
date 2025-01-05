@@ -12,7 +12,7 @@ public class Urun {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(unique = true) // Eğer ürün adı benzersiz olmalıysa
+    @Column(unique = true)
     private String urunAdi;
 
     @OneToMany(mappedBy = "urun", cascade = CascadeType.ALL, orphanRemoval = true)
@@ -21,7 +21,7 @@ public class Urun {
 
     public Urun() {}
 
-    // Getters and Setters
+
     public Long getId() {
         return id;
     }

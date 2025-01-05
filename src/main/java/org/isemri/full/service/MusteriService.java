@@ -14,17 +14,14 @@ public class MusteriService {
     @Autowired
     private MusteriRepository musteriRepository;
 
-    // Tüm müşterileri getir
     public List<Musteri> getAllMusteri() {
         return musteriRepository.findAll();
     }
 
-    // Müşteri ekle
     public Musteri createMusteri(Musteri musteri) {
         return musteriRepository.save(musteri);
     }
 
-    // Müşteri güncelle
     public Musteri updateMusteri(Long id, Musteri musteri) {
         Optional<Musteri> existingMusteri = musteriRepository.findById(id);
         if (existingMusteri.isPresent()) {
@@ -35,7 +32,7 @@ public class MusteriService {
             updatedMusteri.setTelefon(musteri.getTelefon());
             return musteriRepository.save(updatedMusteri);
         }
-        return null;  // Müşteri bulunamadı
+        return null;
     }
 
     // Müşteri sil
@@ -44,7 +41,7 @@ public class MusteriService {
             musteriRepository.deleteById(id);
             return true;
         }
-        return false;  // Müşteri bulunamadı
+        return false;
     }
 }
 

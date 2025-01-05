@@ -24,10 +24,9 @@ public class IsEmriService {
         return isEmriRepository.findById(id);
     }
 
-    public IsEmri save(IsEmri isEmri) {
-        return isEmriRepository.save(isEmri);
+    public IsEmri save(IsEmri isEmri) {return isEmriRepository.save(isEmri);
     }
-
+    
     public void deleteById(Long id) {
         isEmriRepository.deleteById(id);
     }

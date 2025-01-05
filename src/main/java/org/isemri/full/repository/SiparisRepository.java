@@ -7,6 +7,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 public interface SiparisRepository extends JpaRepository<Siparis, Long> {
-    // Siparişleri müşteriye göre bulmak için özelleştirilmiş bir metot
     List<Siparis> findByMusteri(Musteri musteri);
 }

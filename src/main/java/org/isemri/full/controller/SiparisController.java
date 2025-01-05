@@ -16,26 +16,22 @@ public class SiparisController {
     @Autowired
     private SiparisService siparisService;
 
-    // Tüm siparişleri listele
     @GetMapping
     public List<Siparis> getAllSiparis() {
         return siparisService.getAllSiparis();
     }
 
-    // Müşteri bazında siparişleri listele
     @GetMapping("/musteri/{musteriId}")
     public List<Siparis> getSiparisByMusteri(@PathVariable Long musteriId) {
         return siparisService.getSiparisByMusteri(musteriId);
     }
 
-    // Yeni sipariş oluştur
     @PostMapping
     public ResponseEntity<Siparis> createSiparis(@RequestBody Siparis siparis) {
         Siparis savedSiparis = siparisService.createSiparis(siparis);
         return ResponseEntity.status(HttpStatus.CREATED).body(savedSiparis);
     }
 
-    // Sipariş güncelle
     @PutMapping("/{id}")
     public ResponseEntity<Siparis> updateSiparis(@PathVariable Long id, @RequestBody Siparis siparis) {
         Siparis updatedSiparis = siparisService.updateSiparis(id, siparis);
@@ -45,7 +41,6 @@ public class SiparisController {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
     }
 
-    // Sipariş sil
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteSiparis(@PathVariable Long id) {
         boolean deleted = siparisService.deleteSiparis(id);

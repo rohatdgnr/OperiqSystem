@@ -11,7 +11,7 @@ public class UrunMalzeme {
     private String malzemeAdi;
     private int birimMiktar;
 
-    // urunAdi ile ilişki kurmak için bir String alanı ekliyoruz
+
     @ManyToOne
     @JoinColumn(name = "urunAdi", referencedColumnName = "urunAdi", nullable = false)
     @JsonBackReference
@@ -19,7 +19,7 @@ public class UrunMalzeme {
 
     public UrunMalzeme() {}
 
-    // Getters and Setters
+
     public Long getId() {
         return id;
     }

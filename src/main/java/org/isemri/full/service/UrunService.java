@@ -19,7 +19,6 @@ public class UrunService {
     }
 
 
-
     public Map<String, Integer> hesaplaMalzemeIhtiyaci(String urunAdi, int miktar) {
         Urun urun = urunRepository.findByUrunAdi(urunAdi)
                 .orElseThrow(() -> new RuntimeException("Ürün bulunamadı: " + urunAdi));

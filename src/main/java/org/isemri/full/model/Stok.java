@@ -21,7 +21,7 @@ public class Stok {
     @Column(nullable = false)
     private Integer kritikSeviye;
 
-    // Getters and Setters
+
     public Long getId() {
         return id;
     }

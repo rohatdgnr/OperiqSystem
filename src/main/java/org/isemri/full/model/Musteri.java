@@ -18,7 +18,6 @@ public class Musteri {
     private String telefon;
 
 
-    // Getter ve Setter metotları
     public Long getId() {
         return id;
     }

@@ -12,11 +12,11 @@ public class SiparisUrun {
 
     @ManyToOne
     @JoinColumn(name = "urun_id")
-    private Urun urun;  // Sipariş edilen ürün
+    private Urun urun;
 
     @ManyToOne
     @JoinColumn(name = "siparis_id")
-    private Siparis siparis;  // Bu ürünün ait olduğu sipariş
+    private Siparis siparis;
 
     private Integer miktar;
     private Double fiyat;

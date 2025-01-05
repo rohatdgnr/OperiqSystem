@@ -22,7 +22,6 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    // Get all users
     @GetMapping
     public List<User> getAllUsers() {
         return userService.getAllUsers();
@@ -46,14 +45,12 @@ public class UserController {
 
 
 
-    // Get user by ID
     @GetMapping("/{id}")
     public ResponseEntity<User> getUserById(@PathVariable Long id) {
         Optional<User> user = userService.getUserById(id);
         return user.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    // Create a new user
 
     @PostMapping
     public ResponseEntity<User> createUser(@RequestBody User user) {
@@ -62,7 +59,6 @@ public class UserController {
     }
 
 
-    // Delete user by ID
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteUser(@PathVariable Long id) {
         userService.deleteUser(id);
@@ -78,14 +74,13 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Anonymous");
     }
 
-    // getLoggedUsername metodunu buraya ekleyin.
     private String getLoggedUsername() {
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 
         if (principal instanceof UserDetails) {
             return ((UserDetails) principal).getUsername();
         } else {
-            return null; // Kullanıcı oturum açmamış
+            return null;
         }
     }
 

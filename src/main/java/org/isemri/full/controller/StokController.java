@@ -20,7 +20,6 @@ public class StokController {
     @Autowired
     private IsEmriService isEmriService;
 
-    // Stok ekleme
     @PostMapping("/stok")
     public ResponseEntity<Stok> addStok(@RequestBody Stok stok) {
         Stok createdStok = stokService.addStok(stok);
@@ -28,7 +27,6 @@ public class StokController {
     }
 
 
-    // Tüm stokları listeleme
     @GetMapping("/stok")
     public ResponseEntity<List<Stok>> getAllStok() {
         List<Stok> stokList = stokService.getAllStok();

@@ -19,17 +19,14 @@ public class SiparisService {
     @Autowired
     private MusteriRepository musteriRepository;
 
-    // Sipariş ekle
     public Siparis createSiparis(Siparis siparis) {
         return siparisRepository.save(siparis);
     }
 
-    // Tüm siparişleri getir
     public List<Siparis> getAllSiparis() {
         return siparisRepository.findAll();
     }
 
-    // Müşteriye ait siparişleri getir
     public List<Siparis> getSiparisByMusteri(Long musteriId) {
         Optional<Musteri> musteri = musteriRepository.findById(musteriId);
         if (musteri.isPresent()) {
@@ -38,7 +35,6 @@ public class SiparisService {
         return null;
     }
 
-    // Sipariş güncelle
     public Siparis updateSiparis(Long id, Siparis siparis) {
         Optional<Siparis> existingSiparis = siparisRepository.findById(id);
         if (existingSiparis.isPresent()) {
@@ -52,7 +48,6 @@ public class SiparisService {
         return null;
     }
 
-    // Sipariş sil
     public boolean deleteSiparis(Long id) {
         if (siparisRepository.existsById(id)) {
             siparisRepository.deleteById(id);

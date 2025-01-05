@@ -51,7 +51,7 @@ public class IsEmri {
 
     private Boolean kapali;
 
-    // Getters and Setters
+
 
     public Long getId() {
         return id;

@@ -20,7 +20,7 @@ public class UserService {
 
     public UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
-        this.passwordEncoder = new BCryptPasswordEncoder(); // BCrypt şifreleme için
+        this.passwordEncoder = new BCryptPasswordEncoder();
     }
 
     public void registerUser(User user) {
@@ -28,7 +28,7 @@ public class UserService {
         String hashedPassword = passwordEncoder.encode(rawPassword);
         user.setPassword(hashedPassword);
 
-        userRepository.save(user); // Şifreyi hashledikten sonra kullanıcıyı kaydet
+        userRepository.save(user);
     }
 
     public List<User> getAllUsers() {
@@ -40,7 +40,6 @@ public class UserService {
     }
 
     public User createUser(User user) {
-        // Yeni kullanıcı eklerken version değeri genellikle null olmalıdır
         return userRepository.save(user);
     }
 
@@ -50,18 +49,14 @@ public class UserService {
 
         if (userOptional.isPresent()) {
             User user = userOptional.get();
-            return user.getPassword().equals(password);  // Şifreyi kontrol et
+            return user.getPassword().equals(password);
         }
-
-        return false;  // Kullanıcı bulunamazsa, false döndür
+        return false;
     }
-
 
 
     public void deleteUser(Long id) {
         userRepository.deleteById(id);
     }
-
-
 
 }

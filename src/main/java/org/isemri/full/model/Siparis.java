@@ -17,10 +17,10 @@ public class Siparis {
 
     @ManyToOne
     @JoinColumn(name = "musteri_id")
-    private Musteri musteri;  // Siparişin ait olduğu müşteri
+    private Musteri musteri;
 
     @OneToMany(mappedBy = "siparis")
-    private List<SiparisUrun> siparisUrunleri;  // Siparişin içerisindeki ürünler
+    private List<SiparisUrun> siparisUrunleri;
 
     private Double toplamFiyat;
 
