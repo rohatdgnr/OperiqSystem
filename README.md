@@ -13,7 +13,7 @@
 - **İş Emri Takibi**: Çalışanların etkinliğini izlemek, vardiya düzenlemelerini yapmak ve performans değerlendirmeleri sunmak için kullanılan araçlardır. Bu, operasyonel süreçlerin düzgün işlemesi için kritik öneme sahiptir.
 - **Sipariş Yönetim**: Gelir-gider takibi, bütçeleme ve finansal raporlama araçlarıyla, siparişlerin düzgün yönetilmesi sağlanır. Siparişlerin doğru şekilde takip edilmesi, işin finansal sağlığını korur.
 - **Stok Raporlama**: Stok seviyelerinin düzenli olarak izlenmesi ve analiz edilmesi, doğru kararlar almak için gereklidir. Görsel raporlar, işletmenin ihtiyacı olan verilere hızlı erişim sağlar.
-- **ürün Ağacı sistemi**: Ürünlerin bileşenlerine dayalı olarak, ürünlerin üretim süreci ve bileşenleri takip edilir. Bu, tedarik zinciri yönetiminde verimlilik sağlar.
+- **Ürün Ağacı sistemi**: Ürünlerin bileşenlerine dayalı olarak, ürünlerin üretim süreci ve bileşenleri takip edilir. Bu, tedarik zinciri yönetiminde verimlilik sağlar.
 - **Kullanıcı Kaydı**: Kullanıcıların sisteme kaydedilmesi ve yönetilmesi, erişim kontrolünü sağlar. Bu, güvenliği artırır ve her kullanıcının doğru izinlere sahip olmasını temin eder
 - **İleri Düzey Raporlama**: Detaylı veri analizleri yaparak, iş süreçlerini optimize etmek için kapsamlı raporlar oluşturulur. Bu raporlar, yöneticilere daha iyi stratejik kararlar alma imkânı sunar.
 
