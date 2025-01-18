@@ -6,7 +6,7 @@
 
 # OperiqSystem
 
-**OperiqSystem**, işletmelerin operasyonel süreçlerini verimli bir şekilde yönetmek için geliştirilmiş bir yazılım sistemidir. Kullanıcıların tedarik zinciri yönetimi, iş gücü takibi, finansal yönetim ve diğer iş süreçlerini daha etkin hale getirmeleri için kapsamlı araçlar sunar..
+**OperiqSystem**, işletmelerin operasyonel süreçlerini verimli bir şekilde yönetmek için geliştirilmiş bir yazılım sistemidir. Kullanıcıların tedarik zinciri yönetimi, iş gücü takibi, finansal yönetim ve diğer iş süreçlerini daha etkin hale getirmeleri için kapsamlı araçlar sunar.
 
 ## Ana Özellikler
 - **Müsteri Yönetimi**: Müşteri ilişkilerini düzenlemek, stok takibi yapmak, tedarikçi yönetimini sağlamak ve sipariş takibini kolaylaştırmak, işletmelerin verimliliğini artırır. Bu modül, ürünlerin müşterilere zamanında ve doğru bir şekilde ulaştırılmasını sağlar.
